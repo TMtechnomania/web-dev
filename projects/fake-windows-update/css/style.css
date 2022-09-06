@@ -467,6 +467,66 @@ body{
         bottom: 10vh;
         left: 28.43vw;
     }
+
+    #Android{
+        display: block;
+        cursor: default;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        position: absolute;
+        top: 0;
+        z-index: -30;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bright);
+        font-family: Segoe UI Light, Segoe UI, Arial;
+        color: var(--bright);
+        font-size: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #Android img{
+        width: 40vw;
+        user-drag: none;  
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        display: block;
+        margin: 0 auto 2vw;
+    }
+
+    #Android p{
+        display: flex;
+        padding-bottom: 0.8vw;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Android .warn{
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        bottom: 10vh;
+        left: 0;
+        color: var(--font--color-primary);
+    }
+
+    #Android img.warn{
+        width: 100vw;
+        padding: 0 34vw;
+        background-color: var(--bright);
+        z-index: 5;
+        margin: 0;
+    }
 }
 
 /* Laptop View */
