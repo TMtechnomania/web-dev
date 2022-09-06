@@ -25,7 +25,7 @@ function display(){
     var device = document.getElementById("device").innerHTML;
     if (device === 'Mac OS')
     {
-        macOS();
+        iOS();
     }
     if (device === 'iOS')
     {
@@ -116,7 +116,10 @@ function Windows(){
 }
 
 function Android(){
-    let defaultValue = 7500;
+    setTimeout(function hideLogo(){
+        const logo = document.getElementById('androidLogo');
+        logo.style.display = none;
+    }, 2000);
     let timestamp = document.getElementById("timestamp").value;
     if (timestamp > 0)
     {

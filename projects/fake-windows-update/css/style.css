@@ -192,7 +192,7 @@ body{
     }
 
     #Android{
-        display: block;
+        display: none;
         cursor: default;
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
@@ -252,18 +252,18 @@ body{
     }
 
     #iOS{
-        display: none;
+        display: block;
         cursor: default;
         -webkit-user-select: none; /* Safari */
         -ms-user-select: none; /* IE 10 and IE 11 */
         user-select: none; /* Standard syntax */
         position: absolute;
         top: 0;
-        z-index: -30;
-        opacity: 0;
+        z-index: 30;
+        opacity: 1;
         width: 100vw;
         height: 100vh;
-        background-color: #008ad8;
+        background-color: var(--color-secondary);
         font-family: Segoe UI Light, Segoe UI, Arial;
         color: var(--bright);
         font-size: 4vw;
@@ -274,8 +274,8 @@ body{
     }
 
     #iOS img{
-        width: 6vw;
-        user-drag: none;  
+        width: 16vw;
+        user-drag: none;
         user-select: none;
         -moz-user-select: none;
         -webkit-user-drag: none;
@@ -294,9 +294,34 @@ body{
 
     #iOS .warn{
         position: absolute;
+        text-align: center;
+        width: 100vw;
         bottom: 10vh;
-        left: 28.43vw;
+        left: 0;
+        color: var(--font--color-secondary);
     }
+
+    #iOS input.warn {
+        margin: 0 30vw;
+        appearance: none;
+        outline: none;
+        width: 40vw;
+        height: 1vw;
+        border-radius: 1vw;
+        background-color: rgb(95, 95, 95);
+        -webkit-border-radius: 1vw;
+        -moz-border-radius: 1vw;
+        -ms-border-radius: 1vw;
+        -o-border-radius: 1vw;
+    }
+
+    input.warn::-webkit-slider-thumb {
+		background: var(--bright);
+		appearance: none;
+		width: 1vw;
+		height: 1vw;
+		border-radius: 50%;
+	}
 
     #macOS{
         display: none;
@@ -527,6 +552,79 @@ body{
         z-index: 5;
         margin: 0;
     }
+
+    #iOS{
+        display: block;
+        cursor: default;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        position: absolute;
+        top: 0;
+        z-index: 30;
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-secondary);
+        font-family: Segoe UI Light, Segoe UI, Arial;
+        color: var(--bright);
+        font-size: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #iOS img{
+        width: 10vw;
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        display: block;
+        margin: 0 auto 2vw;
+    }
+
+    #iOS p{
+        display: flex;
+        padding-bottom: 0.5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #iOS .warn{
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        bottom: 10vh;
+        left: 0;
+        color: var(--font--color-secondary);
+    }
+
+    #iOS input.warn {
+        margin: 0 35vw;
+        appearance: none;
+        outline: none;
+        width: 30vw;
+        height: 1vw;
+        border-radius: 1vw;
+        background-color: rgb(95, 95, 95);
+        -webkit-border-radius: 1vw;
+        -moz-border-radius: 1vw;
+        -ms-border-radius: 1vw;
+        -o-border-radius: 1vw;
+    }
+
+    input.warn::-webkit-slider-thumb {
+		background: var(--bright);
+		appearance: none;
+		width: 1vw;
+		height: 1vw;
+		border-radius: 50%;
+	}
 }
 
 /* Laptop View */
@@ -629,4 +727,79 @@ body{
         bottom: 10vh;
         left: 41.24vw;
     }
+
+    
+
+    #iOS{
+        display: block;
+        cursor: default;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        position: absolute;
+        top: 0;
+        z-index: 30;
+        opacity: 1;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--color-secondary);
+        font-family: Segoe UI Light, Segoe UI, Arial;
+        color: var(--bright);
+        font-size: 4vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #iOS img{
+        width: 4vw;
+        user-drag: none;
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        display: block;
+        margin: 0 auto 2vw;
+    }
+
+    #iOS p{
+        display: flex;
+        padding-bottom: 0.5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #iOS .warn{
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        bottom: 10vh;
+        left: 0;
+        color: var(--font--color-secondary);
+    }
+
+    #iOS input.warn {
+        margin: 0 45vw;
+        appearance: none;
+        outline: none;
+        width: 10vw;
+        height: 0.3vw;
+        border-radius: 1vw;
+        background-color: rgb(95, 95, 95);
+        -webkit-border-radius: 1vw;
+        -moz-border-radius: 1vw;
+        -ms-border-radius: 1vw;
+        -o-border-radius: 1vw;
+    }
+
+    input.warn::-webkit-slider-thumb {
+		background: var(--bright);
+		appearance: none;
+		width: 0.3vw;
+		height: 0.3vw;
+		border-radius: 50%;
+	}
 }
