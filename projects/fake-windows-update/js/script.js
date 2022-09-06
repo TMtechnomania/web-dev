@@ -117,7 +117,7 @@ function Windows(){
 
 function Android(){
     setTimeout(function hideLogo(){
-        const logo = document.getElementById('androidLogo');
+        const logo = document.getElementById("androidLogo");
         logo.style.display = none;
     }, 2000);
     let timestamp = document.getElementById("timestamp").value;
