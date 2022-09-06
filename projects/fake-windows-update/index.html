@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fake Windows Update | GetProjects</title>
-    <meta name="description" content="Fake Window 10 Update Screen - GetProjects" />
+    <meta name="description" content="Fake Update Screen - GetProjects" />
     <meta name="google" content="nopagereadaloud" />
     <meta property="og:title" content="GetProjects">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="urlHere">
+    <meta property="og:url" content="https://getprojects.tech/web-dev/projects/fake-windows-update/">
     <meta itemprop="name" content="GetProjects">
-    <meta itemprop="description" content="Fake Window 10 Update Screen - GetProjects">
-    <meta itemprop="url" content="urlHere">
+    <meta itemprop="description" content="Fake Update Screen - GetProjects">
+    <meta itemprop="url" content="https://getprojects.tech/web-dev/projects/fake-windows-update/">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="https://getprojects.tech/images/logo.webp" type="image/x-icon">
@@ -48,7 +48,7 @@
 
 
 </head>
-<body oncontextmenu="return false">
+<body onload="deviceTest()" oncontextmenu="return false">
 
     <header>
         <div class="brand">
@@ -86,11 +86,12 @@
     <div class="wrapper">
         <div class="section">
             <div data-aos="fade-up" class="dbox">
-                <h1 data-aos="fade-up" data-aos-delay="250" >Fake Windows Update by GetProjects</h1>
-                <a onclick="fscreen()" data-aos="fade-up" data-aos-delay="350"  class="btn-primary">Apply <i class="fa-solid fa-bolt"></i></a>
+                <h1 data-aos="fade-up" data-aos-delay="250" >Fake <span id="device">Windows 10</span> Update by GetProjects</h1>
+                <input data-aos="fade-up" data-aos-delay="350" type="text" placeholder="Enter Update Duration in Minutes (Default: 5 Minutes)" name="delay-adder" id="timestamp">
+                <a onclick="display()" data-aos="fade-up" data-aos-delay="450"  class="btn-primary">Apply <i class="fa-solid fa-bolt"></i></a>
             </div>
         </div>
-        <div id="fscreen">
+        <div id="windows">
             <img src="./images/301.gif" alt="loading">
             <p><span id="ref">Working on updates</span>&nbsp;<span id="timer">0%</span>&nbsp;complete.</p>
             <p>Don't turn off your PC. This will take a while.</p>
