@@ -116,10 +116,7 @@ function Windows(){
 }
 
 function Android(){
-    setTimeout(function hideLogo(){
-        const logo = document.getElementById("androidLogo");
-        logo.style.display = none;
-    }, 2000);
+    let defaultValue = 7500;
     let timestamp = document.getElementById("timestamp").value;
     if (timestamp > 0)
     {
@@ -136,12 +133,14 @@ function Android(){
     fscreen.style.zIndex = "25";
     fscreen.style.opacity = "1";
     document.body.webkitRequestFullScreen();
+    setTimeout(function hideLogo(){
+        document.getElementById('androidLogo').style.zIndex="-25";
+        document.getElementById('androidLogo').style.display="none";
+    }, 2000);
     var count=0;
     var stage=1;
     var stage2=3;
-    var counter=setInterval(timer, defaultValue); //1000 will  run it every 1 second
-    var ref="Configuring updates";
-
+    var counter=setInterval(timer, defaultValue);
     function timer()
     {
         count=count+1;
@@ -151,7 +150,7 @@ function Android(){
             return;
         }
 
-        document.getElementById("timer").innerHTML=count +'%';
+        document.getElementById("timerAndroid").innerHTML=count +'%';
         
         if (count > 29)
         {
@@ -160,9 +159,7 @@ function Android(){
         
         if (count > 68)
         {
-            ref="Installing Updates";
             count=count+3;
-            document.getElementById("ref").innerHTML=ref;
         }
 
         if (count === 100)
@@ -180,6 +177,73 @@ function Android(){
         {
             clearInterval(counter);
             let fscreen = document.getElementById("Android");
+            fscreen.style.zIndex = "-25";
+            fscreen.style.opacity = "0";
+            const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
+            cancellFullScreen.call(document);
+            count = 0;
+        }
+    }
+}
+
+function iOS(){
+    let defaultValue = 7500;
+    let timestamp = document.getElementById("timestamp").value;
+    if (timestamp > 0)
+    {
+        defaultValue = timestamp * 1250;
+    }
+    if (defaultValue === 7500)
+    {
+        console.log('default value: 7500');
+    }
+    else{
+        console.log(defaultValue);
+    }
+    let fscreen = document.getElementById("iOS");
+    fscreen.style.zIndex = "25";
+    fscreen.style.opacity = "1";
+    document.body.webkitRequestFullScreen();
+    var count=0;
+    var stage=1;
+    var stage2=3;
+    var counter=setInterval(timer, defaultValue);
+    function timer()
+    {
+        count=count+1;
+        if (count <= 0)
+        {
+            clearInterval(counter);
+            return;
+        }
+        document.getElementById('range').value = count;
+        document.getElementById('range').style.background = 'linear-gradient(to right, #fff 0%, #fff ' + count + '%, #5f5f5f ' + count + '%, #5f5f5f 100%)';
+        
+        if (count > 29)
+        {
+            count=count+2;
+        }
+        
+        if (count > 68)
+        {
+            count=count+3;
+        }
+
+        if (count === 100)
+        {
+            clearInterval(counter);
+            let fscreen = document.getElementById("iOS");
+            fscreen.style.zIndex = "-25";
+            fscreen.style.opacity = "0";
+            const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
+            cancellFullScreen.call(document);
+            count = 0;
+        }
+
+        if (count > 99)
+        {
+            clearInterval(counter);
+            let fscreen = document.getElementById("iOS");
             fscreen.style.zIndex = "-25";
             fscreen.style.opacity = "0";
             const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;

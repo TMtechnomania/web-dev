@@ -243,7 +243,7 @@ body{
         color: var(--font--color-primary);
     }
 
-    #Android img.warn{
+    #Android img#androidLogo{
         width: 100vw;
         padding: 0 34vw;
         background-color: var(--bright);
@@ -259,8 +259,8 @@ body{
         user-select: none; /* Standard syntax */
         position: absolute;
         top: 0;
-        z-index: 30;
-        opacity: 1;
+        z-index: -30;
+        opacity: 0;
         width: 100vw;
         height: 100vh;
         background-color: var(--color-secondary);
@@ -301,21 +301,21 @@ body{
         color: var(--font--color-secondary);
     }
 
-    #iOS input.warn {
+    #iOS input#range {
         margin: 0 30vw;
         appearance: none;
         outline: none;
         width: 40vw;
         height: 1vw;
+        background: linear-gradient(to right, #fff 0%, #fff 0%, #5f5f5f 1%, #5f5f5f 100%);
         border-radius: 1vw;
-        background-color: rgb(95, 95, 95);
         -webkit-border-radius: 1vw;
         -moz-border-radius: 1vw;
         -ms-border-radius: 1vw;
         -o-border-radius: 1vw;
-    }
+}
 
-    input.warn::-webkit-slider-thumb {
+    input#range::-webkit-slider-thumb {
 		background: var(--bright);
 		appearance: none;
 		width: 1vw;
@@ -323,51 +323,8 @@ body{
 		border-radius: 50%;
 	}
 
-    #macOS{
+    #Linux{
         display: none;
-        cursor: default;
-        -webkit-user-select: none; /* Safari */
-        -ms-user-select: none; /* IE 10 and IE 11 */
-        user-select: none; /* Standard syntax */
-        position: absolute;
-        top: 0;
-        z-index: -30;
-        opacity: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #008ad8;
-        font-family: Segoe UI Light, Segoe UI, Arial;
-        color: var(--bright);
-        font-size: 4vw;
-        display: flex;
-        flex-direction: column;
-        align-content: center;
-        padding: 47vh 0 0 0;
-    }
-
-    #macOS img{
-        width: 6vw;
-        user-drag: none;  
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-        display: block;
-        margin: 0 auto 2vw;
-    }
-
-    #macOS p{
-        display: flex;
-        padding-bottom: 0.5vw;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #macOS .warn{
-        position: absolute;
-        bottom: 10vh;
-        left: 28.43vw;
     }
 }
 
@@ -517,7 +474,7 @@ body{
     }
 
     #Android img{
-        width: 40vw;
+        width: 20vw;
         user-drag: none;  
         user-select: none;
         -moz-user-select: none;
@@ -547,7 +504,7 @@ body{
 
     #Android img.warn{
         width: 100vw;
-        padding: 0 34vw;
+        padding: 0 40vw;
         background-color: var(--bright);
         z-index: 5;
         margin: 0;
@@ -561,8 +518,8 @@ body{
         user-select: none; /* Standard syntax */
         position: absolute;
         top: 0;
-        z-index: 30;
-        opacity: 1;
+        z-index: -30;
+        opacity: 0;
         width: 100vw;
         height: 100vh;
         background-color: var(--color-secondary);
@@ -604,27 +561,31 @@ body{
         color: var(--font--color-secondary);
     }
 
-    #iOS input.warn {
+    #iOS input#range{
         margin: 0 35vw;
         appearance: none;
         outline: none;
         width: 30vw;
         height: 1vw;
+        background: linear-gradient(to right, #fff 0%, #fff 0%, #5f5f5f 1%, #5f5f5f 100%);
         border-radius: 1vw;
-        background-color: rgb(95, 95, 95);
         -webkit-border-radius: 1vw;
         -moz-border-radius: 1vw;
         -ms-border-radius: 1vw;
         -o-border-radius: 1vw;
     }
 
-    input.warn::-webkit-slider-thumb {
+    input#range::-webkit-slider-thumb {
 		background: var(--bright);
 		appearance: none;
 		width: 1vw;
 		height: 1vw;
 		border-radius: 50%;
 	}
+
+    #Linux{
+        display: none;
+    }
 }
 
 /* Laptop View */
@@ -728,7 +689,65 @@ body{
         left: 41.24vw;
     }
 
-    
+    #Android{
+        display: block;
+        cursor: default;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        position: absolute;
+        top: 0;
+        z-index: -30;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--bright);
+        font-family: Segoe UI Light, Segoe UI, Arial;
+        color: var(--bright);
+        font-size: 1.8vw;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    #Android img{
+        width: 10vw;
+        user-drag: none;  
+        user-select: none;
+        -moz-user-select: none;
+        -webkit-user-drag: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        display: block;
+        margin: 0 auto 2vw;
+    }
+
+    #Android p{
+        display: flex;
+        padding-bottom: 0.8vw;
+        font-weight: 800;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Android .warn{
+        position: absolute;
+        text-align: center;
+        width: 100vw;
+        bottom: 10vh;
+        left: 0;
+        color: var(--font--color-primary);
+    }
+
+    #Android img.warn{
+        width: 100vw;
+        padding: 0 45vw;
+        background-color: var(--bright);
+        z-index: 5;
+        margin: 0;
+    }
 
     #iOS{
         display: block;
@@ -738,8 +757,8 @@ body{
         user-select: none; /* Standard syntax */
         position: absolute;
         top: 0;
-        z-index: 30;
-        opacity: 1;
+        z-index: -30;
+        opacity: 0;
         width: 100vw;
         height: 100vh;
         background-color: var(--color-secondary);
@@ -781,14 +800,14 @@ body{
         color: var(--font--color-secondary);
     }
 
-    #iOS input.warn {
+    #iOS input#range {
         margin: 0 45vw;
         appearance: none;
         outline: none;
         width: 10vw;
         height: 0.3vw;
+        background: linear-gradient(to right, #fff 0%, #fff 0%, #5f5f5f 1%, #5f5f5f 100%);
         border-radius: 1vw;
-        background-color: rgb(95, 95, 95);
         -webkit-border-radius: 1vw;
         -moz-border-radius: 1vw;
         -ms-border-radius: 1vw;
@@ -802,4 +821,8 @@ body{
 		height: 0.3vw;
 		border-radius: 50%;
 	}
+
+    #Linux{
+        display: none;
+    }
 }
