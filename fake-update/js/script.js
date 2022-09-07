@@ -222,9 +222,9 @@ function iOS(){
             clearInterval(counter);
             return;
         }
-        var left;
-        document.getElementsByClassName('bar').style.left = left;
-        left = -100 + count;
+        var left = count;
+        document.getElementById('bar').style.width = left + '%';
+        
         
         if (count > 29)
         {
