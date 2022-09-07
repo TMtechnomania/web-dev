@@ -207,7 +207,7 @@ function iOS(){
     let fscreen = document.getElementById("iOS");
     let fscreenV = document.getElementById("iOSvideo");
     fscreenV.webkitRequestFullScreen();
-    fscreenV.style.zIndex = "24";
+    fscreenV.style.zIndex = "1";
     fscreen.style.zIndex = "25";
     fscreen.style.opacity = "1";
     var count=0;
