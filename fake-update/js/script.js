@@ -5,12 +5,16 @@ function deviceTest(){
         windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
         iosPlatforms = ['iPhone', 'iPad', 'iPod'],
         os = null;
-    
-    if (macosPlatforms.indexOf(platform) !== -1) {
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+        os = "iOS";
+    }
+    else if (macosPlatforms.indexOf(platform) !== -1) {
         os = 'MacOS';
-    } else if (iosPlatforms.indexOf(platform) !== -1) {
-        os = 'iOS';
-    } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    }
+    //  else if (iosPlatforms.indexOf(platform) !== -1) {
+    //     os = 'iOS';
+    // }
+     else if (windowsPlatforms.indexOf(platform) !== -1) {
         os = 'Windows';
     } else if (/Android/.test(userAgent)) {
         os = 'Android';
