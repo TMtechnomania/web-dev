@@ -7,7 +7,7 @@ function deviceTest(){
         os = null;
     
     if (macosPlatforms.indexOf(platform) !== -1) {
-        os = 'Mac OS';
+        os = 'MacOS';
     } else if (iosPlatforms.indexOf(platform) !== -1) {
         os = 'iOS';
     } else if (windowsPlatforms.indexOf(platform) !== -1) {
@@ -23,7 +23,7 @@ function deviceTest(){
 
 function display(){
     var device = document.getElementById("device").innerHTML;
-    if (device === 'Mac OS')
+    if (device === 'MacOS')
     {
         iOS();
     }
