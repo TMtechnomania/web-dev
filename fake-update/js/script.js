@@ -37,7 +37,7 @@ function display(){
     }
     if (device === 'Windows')
     {
-        Windows();
+        iOS();
     }
     if (device === 'Android')
     {
@@ -205,9 +205,11 @@ function iOS(){
         console.log(defaultValue);
     }
     let fscreen = document.getElementById("iOS");
+    let fscreenV = document.getElementById("iOSvideo");
+    fscreenV.webkitRequestFullScreen();
+    fscreenV.style.zIndex = "24";
     fscreen.style.zIndex = "25";
     fscreen.style.opacity = "1";
-    document.body.webkitRequestFullScreen();
     var count=0;
     var stage=1;
     var stage2=3;
@@ -220,8 +222,9 @@ function iOS(){
             clearInterval(counter);
             return;
         }
-        document.getElementById('range').value = count;
-        document.getElementById('range').style.background = 'linear-gradient(to right, #fff 0%, #fff ' + count + '%, #5f5f5f ' + count + '%, #5f5f5f 100%)';
+        var left;
+        document.getElementsByClassName('bar').style.left = left;
+        left = -100 + count;
         
         if (count > 29)
         {
