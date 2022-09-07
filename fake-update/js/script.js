@@ -241,9 +241,10 @@ function iOS(){
             clearInterval(counter);
             let fscreen = document.getElementById("iOS");
             fscreen.style.zIndex = "-25";
+            fscreenV.style.zIndex = "-25";
             fscreen.style.opacity = "0";
-            const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
-            cancellFullScreen.call(document);
+            const cancellFullScreen = fscreenV.exitFullscreen || fscreenV.mozCancelFullScreen || fscreenV.webkitExitFullscreen || fscreenV.msExitFullscreen;
+            cancellFullScreen.call(fscreenV);
             count = 0;
         }
 
@@ -252,9 +253,10 @@ function iOS(){
             clearInterval(counter);
             let fscreen = document.getElementById("iOS");
             fscreen.style.zIndex = "-25";
+            fscreenV.style.zIndex = "-25";
             fscreen.style.opacity = "0";
-            const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
-            cancellFullScreen.call(document);
+            const cancellFullScreen = fscreenV.exitFullscreen || fscreenV.mozCancelFullScreen || fscreenV.webkitExitFullscreen || fscreenV.msExitFullscreen;
+            cancellFullScreen.call(fscreenV);
             count = 0;
         }
     }
