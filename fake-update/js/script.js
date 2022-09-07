@@ -38,7 +38,7 @@ function display(){
     }
     if (device === 'Windows')
     {
-        Linux();
+        Windows();
     }
     if (device === 'Android')
     {
