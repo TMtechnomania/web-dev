@@ -27,6 +27,7 @@ function deviceTest(){
 }
 
 function display(){
+    document.body.style.overflow = "hidden";
     var device = document.getElementById("device").innerHTML;
     if (device === 'MacOS')
     {
@@ -105,6 +106,7 @@ function Windows(){
             const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
             cancellFullScreen.call(document);
             count = 0;
+            document.body.style.overflow = "unset";
         }
 
         if (count > 99)
@@ -116,6 +118,7 @@ function Windows(){
             const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
             cancellFullScreen.call(document);
             count = 0;
+            document.body.style.overflow = "unset";
         }
     }
 }
@@ -176,6 +179,7 @@ function Android(){
             const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
             cancellFullScreen.call(document);
             count = 0;
+            document.body.style.overflow = "unset";
         }
 
         if (count > 99)
@@ -187,6 +191,7 @@ function Android(){
             const cancellFullScreen = document.exitFullscreen || document.mozCancelFullScreen || document.webkitExitFullscreen || document.msExitFullscreen;
             cancellFullScreen.call(document);
             count = 0;
+            document.body.style.overflow = "unset";
         }
     }
 }
@@ -247,6 +252,7 @@ function iOS(){
             const cancellFullScreen = fscreenV.exitFullscreen || fscreenV.mozCancelFullScreen || fscreenV.webkitExitFullscreen || fscreenV.msExitFullscreen;
             cancellFullScreen.call(fscreenV);
             count = 0;
+            document.body.style.overflow = "unset";
         }
 
         if (count > 99)
@@ -259,6 +265,7 @@ function iOS(){
             const cancellFullScreen = fscreenV.exitFullscreen || fscreenV.mozCancelFullScreen || fscreenV.webkitExitFullscreen || fscreenV.msExitFullscreen;
             cancellFullScreen.call(fscreenV);
             count = 0;
+            document.body.style.overflow = "unset";
         }
     }
 }
@@ -367,6 +374,7 @@ function Linux(){
             cancellFullScreen.call(document);
             count = 0;
             document.getElementById('Linux').innerHTML = "<p>admin@user1 $ sudo apt-get update</p>"+"<p>Checking for Updates...</p>";
+            document.body.style.overflow = "unset";
         }
 
         if (count > 99)
@@ -379,6 +387,7 @@ function Linux(){
             cancellFullScreen.call(document);
             count = 0;
             document.getElementById('Linux').innerHTML = defaultText;
+            document.body.style.overflow = "unset";
         }
     }
 }
