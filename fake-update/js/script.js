@@ -64,7 +64,7 @@ function Windows(){
         console.log(defaultValue);
     }
     let fscreen = document.getElementById("windows");
-    fscreen.style.zIndex = "25";
+    fscreen.style.zIndex = "50";
     fscreen.style.opacity = "1";
     document.body.webkitRequestFullScreen();
     var count=0;
@@ -135,7 +135,7 @@ function Android(){
         console.log(defaultValue);
     }
     let fscreen = document.getElementById("Android");
-    fscreen.style.zIndex = "25";
+    fscreen.style.zIndex = "50";
     fscreen.style.opacity = "1";
     document.body.webkitRequestFullScreen();
     setTimeout(function hideLogo(){
@@ -209,7 +209,7 @@ function iOS(){
     let fscreenV = document.getElementById("iOSvideo");
     fscreenV.webkitRequestFullScreen();
     fscreenV.style.zIndex = "1";
-    fscreen.style.zIndex = "25";
+    fscreen.style.zIndex = "50";
     fscreen.style.opacity = "1";
     var count=0;
     var stage=1;
@@ -278,7 +278,7 @@ function Linux(){
         console.log(defaultValue);
     }
     let fscreen = document.getElementById("Linux");
-    fscreen.style.zIndex = "25";
+    fscreen.style.zIndex = "50";
     fscreen.style.opacity = "1";
     document.body.webkitRequestFullScreen();
     var count=0;
