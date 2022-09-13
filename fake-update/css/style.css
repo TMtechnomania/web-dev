@@ -78,6 +78,11 @@ body{
     scroll-snap-type: y mandatory;
 }
 
+#windows, #iOS,#Android,#Linux{
+    cursor: none !important;
+    touch-action: none;
+}
+
 #Linux > p:last-child {
     scroll-snap-align: start;
 }

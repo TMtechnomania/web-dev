@@ -1,4 +1,5 @@
 function deviceTest(){
+    document.body.requestPointerLock();
     navigator.keyboard.lock();
     var userAgent = window.navigator.userAgent,
         platform = window.navigator.platform,
@@ -20,6 +21,10 @@ function deviceTest(){
     } else if (/Android/.test(userAgent)) {
         os = 'Android';
     } else if (!os && /Linux/.test(platform)) {
+        os = 'Linux';
+    }else if (navigator.appVersion.indexOf("X11")!=-1) {
+        os = 'Linux';
+    }else if (navigator.appVersion.indexOf("Linux")!=-1) {
         os = 'Linux';
     }
     console.log(os);
